@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ken Priore · On the Record</title>
+<meta name="description" content="Ken Priore. Legal and governance leader for enterprise AI. The career record, the published record, and the capabilities behind both.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+
+<!-- Icons. Relative paths: the site deploys to a GitHub Pages subpath. -->
+<link rel="icon" href="assets/icon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/icon/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="assets/icon/favicon.ico" sizes="32x32 16x16">
+<link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-title" content="Ken Priore">
+
+<!-- Social preview. These URLs are absolute on purpose: LinkedIn, Slack and
+     iMessage fetch the card out of band, with no page context to resolve a
+     relative path against. If the domain ever changes, change them here. -->
+<link rel="canonical" href="https://resume.kenpriore.ai/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://resume.kenpriore.ai/">
+<meta property="og:title" content="Ken Priore · On the Record">
+<meta property="og:description" content="Legal and governance leader for enterprise AI. Career record, published work, and credentials.">
+<meta property="og:image" content="https://resume.kenpriore.ai/assets/icon/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ken Priore · On the Record">
+<meta name="twitter:description" content="Legal and governance leader for enterprise AI. Career record, published work, and credentials.">
+<meta name="twitter:image" content="https://resume.kenpriore.ai/assets/icon/og-card.png">
+</head>
+<body>
+
+<!-- Inline sprite: icons. Same-document refs only. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-negotiate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="4" y1="9" x2="11" y2="9"></line><polyline points="8,6 11,9 8,12"></polyline><line x1="20" y1="15" x2="13" y2="15"></line><polyline points="16,12 13,15 16,18"></polyline></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="4" y1="12" x2="10" y2="12"></line><line x1="10" y1="12" x2="20" y2="7"></line><line x1="10" y1="12" x2="20" y2="17"></line><circle fill="currentColor" stroke="none" cx="10" cy="12" r="1.8"></circle></symbol>
+    <symbol id="i-ledger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><rect x="4" y="4" width="16" height="16"></rect><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="14" x2="20" y2="14"></line><line x1="14" y1="4" x2="14" y2="20"></line></symbol>
+    <!-- Sprite copies (signal-design families), red accents collapsed to ink. -->
+    <symbol id="i-record" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><path d="M6 4 L14 4 L18 8 L18 20 L6 20 Z"></path><polyline points="14,4 14,8 18,8"></polyline><circle fill="currentColor" stroke="none" cx="12" cy="15" r="2"></circle></symbol>
+    <symbol id="i-attest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><circle cx="12" cy="12" r="6"></circle><polyline points="9,12 11,14 15,9.5"></polyline><line x1="12" y1="2.5" x2="12" y2="5"></line><line x1="12" y1="19" x2="12" y2="21.5"></line><line x1="2.5" y1="12" x2="5" y2="12"></line><line x1="19" y1="12" x2="21.5" y2="12"></line></symbol>
+    <symbol id="i-framework" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><rect x="5" y="5" width="14" height="14"></rect><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><path d="M5 4 L14 4 L18 8 L18 20 L5 20 Z"></path><polyline points="14,4 14,8 18,8"></polyline><path d="M8 16 q2 -4 4 0 t4 0"></path></symbol>
+    <symbol id="i-foundation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><rect x="6" y="5" width="12" height="9"></rect><line x1="3" y1="15" x2="21" y2="15"></line><line x1="5" y1="15" x2="3" y2="18"></line><line x1="9" y1="15" x2="7" y2="18"></line><line x1="13" y1="15" x2="11" y2="18"></line><line x1="17" y1="15" x2="15" y2="18"></line><line x1="21" y1="15" x2="19" y2="18"></line></symbol>
+    <symbol id="i-custody" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><rect stroke-width="3" x="5" y="5" width="14" height="14"></rect><circle fill="currentColor" stroke="none" cx="12" cy="11" r="2"></circle><rect fill="currentColor" stroke="none" x="11" y="11" width="2" height="4"></rect></symbol>
+    <symbol id="i-repository" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><rect x="4" y="7" width="16" height="13"></rect><line x1="4" y1="11" x2="20" y2="11"></line><line x1="9" y1="11" x2="9" y2="20"></line><line x1="12" y1="11" x2="12" y2="20"></line><line x1="15" y1="11" x2="15" y2="20"></line></symbol>
+    <symbol id="i-node" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="12" y1="12" x2="5" y2="6"></line><line x1="12" y1="12" x2="20" y2="7"></line><line x1="12" y1="12" x2="14" y2="20"></line><circle fill="currentColor" stroke="none" cx="5" cy="6" r="1.6"></circle><circle fill="currentColor" stroke="none" cx="20" cy="7" r="1.6"></circle><circle fill="currentColor" stroke="none" cx="14" cy="20" r="1.6"></circle><circle fill="currentColor" stroke="none" cx="12" cy="12" r="3"></circle></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><circle fill="currentColor" stroke="none" cx="7" cy="17" r="2.5"></circle><path d="M11 17 A4 4 0 0 0 7 13"></path><path d="M15 17 A8 8 0 0 0 7 9"></path></symbol>
+    <symbol id="i-clause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><path d="M9 5 L7 5 L7 19 L9 19"></path><line x1="11" y1="9" x2="17" y2="9"></line><line x1="11" y1="13" x2="17" y2="13"></line><line x1="11" y1="17" x2="15" y2="17"></line></symbol>
+    <symbol id="i-throughput" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><circle fill="currentColor" stroke="none" cx="5" cy="12" r="2"></circle><circle fill="currentColor" stroke="none" cx="10" cy="12" r="2"></circle><circle fill="currentColor" stroke="none" cx="15" cy="12" r="2"></circle><polyline points="18,9 21,12 18,15"></polyline></symbol>
+    <symbol id="i-baseline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="3" y1="14" x2="21" y2="14"></line><line x1="6" y1="14" x2="6" y2="10"></line><line x1="10" y1="14" x2="10" y2="8"></line><line x1="14" y1="14" x2="14" y2="11"></line><line x1="18" y1="14" x2="18" y2="7"></line><circle fill="currentColor" stroke="none" cx="18" cy="7" r="2"></circle></symbol>
+    <symbol id="i-eval" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="4" y1="18" x2="20" y2="18"></line><circle fill="currentColor" stroke="none" cx="9" cy="12" r="2"></circle><polyline points="14,12 16,14 20,8"></polyline></symbol>
+    <symbol id="i-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="6" y1="4" x2="6" y2="20"></line><line x1="18" y1="4" x2="18" y2="20"></line><line x1="6" y1="12" x2="18" y2="12"></line></symbol>
+    <symbol id="i-fulcrum" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><polygon points="12,13 8,20 16,20"></polygon><line x1="4" y1="10" x2="20" y2="14"></line><circle fill="currentColor" stroke="none" cx="4.5" cy="10" r="1.8"></circle></symbol>
+    <symbol id="i-escalate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><line x1="4" y1="19" x2="13" y2="19"></line><line x1="4" y1="15" x2="13" y2="15"></line><line x1="4" y1="11" x2="10" y2="11"></line><line x1="18" y1="18" x2="18" y2="6"></line><polyline points="15,9 18,6 21,9"></polyline></symbol>
+    <symbol id="i-audit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><circle cx="7" cy="7" r="4"></circle><line x1="9" y1="11" x2="12" y2="14"></line><line x1="4" y1="18" x2="20" y2="18"></line><line x1="8" y1="18" x2="8" y2="15"></line><line x1="12" y1="18" x2="12" y2="15"></line><line x1="16" y1="18" x2="16" y2="15"></line></symbol>
+    <symbol id="i-draft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="butt"><path d="M6 3 L15 3 L19 7 L19 21 L6 21 Z"></path><polyline points="15,3 15,7 19,7"></polyline><line x1="8" y1="18" x2="17" y2="9"></line></symbol>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="wrap mast">
+    <div class="mark">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="12" fill="none" stroke="#0A0A0A" stroke-width="3"></circle>
+        <g class="loop-orbit"><circle cx="29" cy="17" r="3.4" fill="#0057B8"></circle></g>
+      </svg>
+      <div class="wordmark">KEN PRIORE<small>Law · Technology · Innovation</small></div>
+    </div>
+    <nav class="site" aria-label="Site">
+      <a class="active" href="#experience" aria-current="page">Experience</a>
+      <a class="link-com" href="https://kenpriore.com">Writing</a>
+      <a class="link-ai" href="https://kenpriore.ai">Lab</a>
+      <a href="mailto:ken@kenpriore.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 2 · Statement + 3 · Fig. 01 -->
+  <section class="statement" id="statement">
+    <div class="st-head">
+      <span class="kicker page-kicker">On the record</span>
+      <h1>Ken Priore</h1>
+    </div>
+    <div class="st-body">
+      <p class="lede"><strong>Legal and governance leader for enterprise AI.</strong>
+      Twenty-five years in-house and as outside general counsel across law, product,
+      and engineering, focused on making AI agents accountable, verifiable, and
+      trustworthy.</p>
+      <p class="lede">The path ran through securities litigation, a New York Stock
+      Exchange listing, a consumer platform serving 150 countries, privacy programs
+      under GDPR and CCPA, and the partnerships and intellectual property behind
+      enterprise software. Across all of it the same question: what did the system
+      do, under what authority, and who answers for it.</p>
+      <p class="lede">That question is now the work itself. At Docusign it means
+      product and AI governance for agreement software built on machine learning.
+      Beyond it, published research on proving what an autonomous agent did and who
+      authorized it.</p>
+    </div>
+    <figure class="fig">
+      <div class="plate" data-photo="assets/photos/KenPrioreHeadshot.jpg" data-alt="Portrait of Ken Priore"></div>
+    </figure>
+  </section>
+
+  <!-- Motif band. Six house marks from the shipped kenpriore.com theme
+       (loop · redline · sort · custody · agreement · loop-advanced), inlined,
+       ink only, no motion. Sits directly under the hero, as on kenpriore.com. -->
+  <div class="motifband" aria-hidden="true">
+    <div class="m"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="50" cy="22" r="8" fill="var(--signal,#0A0A0A)"/></svg></div>
+    <div class="m"><svg viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="5"><line x1="18" y1="28" x2="82" y2="28"/><line x1="18" y1="44" x2="70" y2="44"/><line x1="18" y1="60" x2="78" y2="60"/><line x1="18" y1="76" x2="62" y2="76"/></g><line x1="12" y1="36" x2="88" y2="36" stroke="var(--signal,#0A0A0A)" stroke-width="6"/></svg></div>
+    <div class="m"><svg viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="2" opacity="0.28"><line x1="30" y1="18" x2="30" y2="86"/><line x1="50" y1="18" x2="50" y2="86"/><line x1="70" y1="18" x2="70" y2="86"/></g><rect x="26" y="26" width="8" height="8" fill="currentColor"/><rect x="46" y="26" width="8" height="8" fill="var(--signal,#0A0A0A)"/><rect x="66" y="34" width="8" height="8" fill="var(--emphasis,#0A0A0A)"/><rect x="26" y="44" width="8" height="8" fill="currentColor"/><rect x="46" y="50" width="8" height="8" fill="currentColor"/></svg></div>
+    <div class="m"><svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="6"/><polyline points="34,52 46,64 68,36" fill="none" stroke="var(--signal,#0A0A0A)" stroke-width="7" stroke-linecap="square"/></svg></div>
+    <div class="m"><svg viewBox="0 0 100 100"><path d="M28 16 H62 L76 30 V84 H28 Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M62 16 V30 H76" fill="none" stroke="currentColor" stroke-width="5"/><g stroke="currentColor" stroke-width="4"><line x1="36" y1="46" x2="68" y2="46"/><line x1="36" y1="58" x2="68" y2="58"/><line x1="36" y1="70" x2="56" y2="70" stroke="var(--signal,#0A0A0A)"/></g></svg></div>
+    <div class="m"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="78" cy="50" r="8" fill="var(--signal,#0A0A0A)"/></svg></div>
+  </div>
+
+  <!-- 4 · The record — the complete career ledger.
+       Dates and titles per LinkedIn (linkedin.com/in/kennethpriore),
+       which is authoritative over the resume markdown. Org-level rows,
+       reverse-chron; role progressions inside each expansion as a docket. -->
+  <div class="sect" id="experience">
+    <h2><svg class="sect-icon" aria-hidden="true"><use href="#i-record"></use></svg>Experience</h2>
+    <span class="kicker num">Career ledger · 1995–2026</span>
+  </div>
+
+  <div class="tools num">
+    <div class="tabs" role="group" aria-label="Filter roles">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="operating" aria-pressed="false">Operating roles</button>
+      <button type="button" data-filter="advisory" aria-pressed="false">Advisory &amp; founding</button>
+    </div>
+    <div class="actions">
+      <span class="kicker copy-confirm" id="copy-confirm" role="status">Copied · ken@kenpriore.com</span>
+      <button type="button" class="btn" id="btn-copy">Copy email</button>
+      <button type="button" class="btn" id="btn-print">Print</button>
+    </div>
+  </div>
+
+  <div class="ledger-wrap">
+  <div class="baseline" id="baseline" aria-hidden="true"></div>
+  <ul class="ledger num" id="ledger">
+
+    <li class="tone-human" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-docusign">
+        <span class="y">2023–</span>
+        <span class="r">Deputy General Counsel, Senior Director</span>
+        <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-sign"></use></svg>DOCUSIGN</span>
+      </button>
+      <div class="detail" id="d-docusign">
+        <ul class="docket">
+          <li><span class="dr">Deputy General Counsel, Senior Director · Product, Engineering, IP &amp; Partner Legal</span><span class="dd">Sep 2025–Present</span></li>
+          <li><span class="dr">Associate General Counsel · Product and Strategic Partnerships</span><span class="dd">Sep 2023–Sep 2025</span></li>
+        </ul>
+        <p class="narrative">Lead legal for Product, Engineering, IP, and Partner Legal on the Intelligent Agreement Management platform. The team sits where the platform meets the law: responsible-AI governance across the ML lifecycle, legal-by-design and privacy-by-design embedded in the development process itself, stewardship of the global IP portfolio, and the platform, ISV, and channel transactions that extend the partner network. The through line is trust that survives scrutiny, from regulators, from partners, and from the agents now doing the work.</p>
+      </div>
+    </li>
+
+    <li class="tone-human" data-track="advisory">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-third-economy">
+        <span class="y">2020–</span>
+        <span class="r">Director &amp; Board Chairperson</span>
+        <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-foundation"></use></svg>THIRD ECONOMY</span>
+      </button>
+      <div class="detail" id="d-third-economy">
+        <ul class="docket">
+          <li><span class="dr">Director &amp; Board Chairperson (advisory)</span><span class="dd">Jan 2020–Present</span></li>
+        </ul>
+        <p class="narrative">Board chairperson and strategic advisor. Third Economy helps organizations analyze and improve their ESG performance and build sustainable-investing strategies, organized around the VIA3 framework. The seat draws on sustainability work inside operating companies: smart-grid infrastructure at Silver Spring, disclosure and procurement practices at Box, and program building at Atlassian.</p>
+      </div>
+    </li>
+
+    <li class="tone-human" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-atlassian">
+        <span class="y">2021–2023</span>
+        <span class="r">Director of Privacy · Product &amp; Compliance</span>
+        <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-custody"></use></svg>ATLASSIAN</span>
+      </button>
+      <div class="detail" id="d-atlassian">
+        <ul class="docket">
+          <li><span class="dr">Director of Privacy · Product &amp; Compliance</span><span class="dd">Oct 2021–Apr 2023</span></li>
+        </ul>
+        <p class="narrative">Directed privacy across product and compliance. Built the Global Privacy Program from shared principles and a risk-oriented methodology, meeting GDPR, CCPA, and CPRA across the full documentation stack, from DPAs and transfer assessments to retention schedules and incident response. Scaled privacy requirements across more than 5,000 marketplace app partners, and ran privacy impact assessments alongside product leadership so concerns surfaced during development, before launch. Led a team of four privacy attorneys and program managers.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-box">
+        <span class="y">2018–2021</span>
+        <span class="r">Global Director of Legal</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-repository"></use></svg>BOX</span>
+      </button>
+      <div class="detail" id="d-box">
+        <ul class="docket">
+          <li><span class="dr">Global Director of Legal</span><span class="dd">Oct 2019–Oct 2021</span></li>
+          <li><span class="dr">Senior Managing Counsel · Partnerships</span><span class="dd">Jun 2018–Nov 2019</span></li>
+          <li><span class="dr">Senior Commercial Counsel</span><span class="dd">Mar 2018–Jun 2018</span></li>
+        </ul>
+        <p class="narrative">Led counsel on the long-term Google Cloud agreement that moved Box's core infrastructure to the public cloud: months of negotiation, dozens of teams, Board and C-suite engagement. Ran partnership legal for technology integrations with Microsoft, Salesforce, Apple, Google, Slack, Zoom, and Okta; oversaw procurement legal for more than 2,000 vendors; and re-engineered the contract review process around a new CLM as the pandemic reshuffled priorities.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-silver-spring">
+        <span class="y">2014–2018</span>
+        <span class="r">Director, Commercial Counsel</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-node"></use></svg>SILVER SPRING NETWORKS</span>
+      </button>
+      <div class="detail" id="d-silver-spring">
+        <ul class="docket">
+          <li><span class="dr">Director, Commercial Counsel</span><span class="dd">Feb 2014–Feb 2018</span></li>
+        </ul>
+        <p class="narrative">Lead commercial counsel for IoT hardware and software sold to utilities and smart cities. Structured and negotiated the full range of technology agreements, from software licensing and cloud services to manufacturing and supply, and drafted the NaaS and SaaS templates the business standardized on. Closed transactions across APAC and EMEA inside a matrixed organization, and ran recurring privacy and security audits of vendors and key partners. Itron acquired the company for $830M in January 2018.</p>
+      </div>
+    </li>
+
+    <li class="tone-human" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-grindr">
+        <span class="y">2009–2015</span>
+        <span class="r">General Counsel</span>
+        <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-signal"></use></svg>GRINDR</span>
+      </button>
+      <div class="detail" id="d-grindr">
+        <ul class="docket">
+          <li><span class="dr">General Counsel</span><span class="dd">Oct 2009–Feb 2015</span></li>
+        </ul>
+        <p class="narrative">General counsel as the company grew from startup to a platform serving more than 10 million users across 150 countries. Built the legal function whole: privacy policies and terms of service for a category the law had not caught up with, content-moderation and takedown architecture, a trademark portfolio spanning the United States, Europe, Australia, and Canada, and the asset sale of Blendr with its cross-border IP and revenue-share provisions. Supported the private equity investment that led to the company's $93M acquisition by Beijing Kunlun Tech.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-paypal">
+        <span class="y">2007–2009</span>
+        <span class="r">Commercial Counsel (secondment)</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-throughput"></use></svg>PAYPAL</span>
+      </button>
+      <div class="detail" id="d-paypal">
+        <ul class="docket">
+          <li><span class="dr">Commercial Counsel (secondment)</span><span class="dd">Nov 2007–Nov 2009</span></li>
+        </ul>
+        <p class="narrative">Commercial counsel, on secondment, negotiating the agreements a payments platform runs on: the master payment processing agreement, software licensing and consulting MSAs, and co-marketing and seasonal campaign agreements for merchant services and business development.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-stock-option-solutions">
+        <span class="y">2007–2009</span>
+        <span class="r">General Counsel (part-time)</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-eval"></use></svg>STOCK &amp; OPTION SOLUTIONS</span>
+      </button>
+      <div class="detail" id="d-stock-option-solutions">
+        <ul class="docket">
+          <li><span class="dr">General Counsel (part-time)</span><span class="dd">Dec 2007–Nov 2009</span></li>
+        </ul>
+        <p class="narrative">Part-time general counsel to a consulting firm with more than 90 employees and $20M in annual revenue. Strengthened the master service agreement's indemnification and liability protections, led a partnership negotiation that raised revenue 50 percent, guided the Board through a reduction in force, and led the strategic response to a breach of customer personal data.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="advisory">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-new-leaf">
+        <span class="y">2004–2006</span>
+        <span class="r">General Counsel / COO</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-baseline"></use></svg>NEW LEAF FINANCIAL</span>
+      </button>
+      <div class="detail" id="d-new-leaf">
+        <ul class="docket">
+          <li><span class="dr">General Counsel / COO</span><span class="dd">Jun 2004–Aug 2006</span></li>
+        </ul>
+        <p class="narrative">General counsel and COO of a debt-restructuring firm. Designed the compliance architecture for a heavily regulated business, from debt collection and telemarketing rules to consumer and commercial bankruptcy, while the firm grew past $5M under management within eighteen months. Led the earn-out sale to a market leader from first meeting to final documents.</p>
+      </div>
+    </li>
+
+    <li class="tone-human" data-track="advisory">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-licensed-learning">
+        <span class="y">2002–2004</span>
+        <span class="r">Counsel / COO, founding partner</span>
+        <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-gate"></use></svg>LICENSED LEARNING</span>
+      </button>
+      <div class="detail" id="d-licensed-learning">
+        <ul class="docket">
+          <li><span class="dr">Counsel / COO, founding partner</span><span class="dd">Sep 2002–Jun 2004</span></li>
+        </ul>
+        <p class="narrative">Founding partner and counsel of an e-learning firm delivering heavily regulated products, including the California Online Traffic School. Served as the primary contact for every regulatory inquiry, negotiated the acquisition of the traffic school itself, and converted that regulatory footing into consulting engagements with Toyota Motors USA and WellPoint.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-carroll-burdick">
+        <span class="y">2001–2002</span>
+        <span class="r">Senior Securities Associate</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-fulcrum"></use></svg>CARROLL BURDICK &amp; McDONOUGH</span>
+      </button>
+      <div class="detail" id="d-carroll-burdick">
+        <ul class="docket">
+          <li><span class="dr">Senior Securities Associate</span><span class="dd">May 2001–Jun 2002</span></li>
+        </ul>
+        <p class="narrative">Securities litigation handled from both plaintiff and defense perspectives, across law and motion, arbitration, and mediation. Represented an investment management firm through the acquisition of a competitor with $789M under management and its simultaneous sale to a third-party financial institution, and structured offshore ownership for a client holding more than 5,000 internet domain names.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-mvc">
+        <span class="y">1999–2001</span>
+        <span class="r">Counsel / Director of Policy &amp; Compliance</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-escalate"></use></svg>MVC CAPITAL (FORMERLY meVC)</span>
+      </button>
+      <div class="detail" id="d-mvc">
+        <ul class="docket">
+          <li><span class="dr">Counsel / Director of Policy &amp; Compliance</span><span class="dd">Oct 1999–Apr 2001</span></li>
+        </ul>
+        <p class="narrative">In-house counsel for the venture fund that went public first. Drafted the N-2 registration and fund prospectus, built the compliance program from a blank page, and ran the NYSE listing of the meVC Draper Fisher Jurvetson Fund I, raising $330M through an unusual delayed listing and trading window. Stood on the NYSE podium on June 26, 2000, the first day of trading. Closed 17 financings in just over a year and lobbied through the Business Development Company Roundtable to modernize fund rules under the Investment Company Act.</p>
+      </div>
+    </li>
+
+    <li class="tone-inst" data-track="operating">
+      <button class="rowhead" type="button" aria-expanded="false" aria-controls="d-schwab">
+        <span class="y">1995–1999</span>
+        <span class="r">Managing Attorney · Arbitration/Litigation</span>
+        <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-audit"></use></svg>CHARLES SCHWAB</span>
+      </button>
+      <div class="detail" id="d-schwab">
+        <ul class="docket">
+          <li><span class="dr">Managing Attorney · Arbitration/Litigation</span><span class="dd">Sep 1995–Sep 1999</span></li>
+        </ul>
+        <p class="narrative">Managing attorney for arbitration, litigation, and third-party actions, running an active docket of 400 simultaneous matters covering more than $100M in customer assets. Built a document automation program that raised the department's capacity 300 percent while headcount fell by half, then moved to policy, advising business units on securities regulation under the 33, 34, and 40 Acts, including the firm's early e-commerce practices.</p>
+      </div>
+    </li>
+  </ul>
+  </div>
+
+  <!-- 5 · On the record -->
+  <div class="sect" id="on-the-record">
+    <h2><svg class="sect-icon" aria-hidden="true"><use href="#i-attest"></use></svg>On the record</h2>
+    <span class="kicker">Papers · Speaking · In conversation · Credentials</span>
+  </div>
+
+  <div class="pub-group">
+    <div class="pub-kicker kicker"><b>Selected work</b> · AI, accountability, and the rule of law</div>
+    <ul class="pubs num">
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">Certificate of Action: A Trust Primitive for Verifiable Autonomous Legal AI Agent Workflows
+          <span class="sub">Accepted to ICML 2026; presented in Seoul, July 2026. A tamper-evident record proving what an agent did, under what authority, and whether a human reviewed it; mapped to EU AI Act and NIST AI RMF.</span></span>
+        <span class="chip chip--pub">ICML 2026</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/work-icml.jpg" alt="Presenting the Certificate of Action paper at ICML 2026">
+        <figcaption class="kicker num">Exhibit · ICML · 2026</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">The Fiduciary's Footprint: How Legal AI Agents Can Prove They Were Loyal
+          <span class="sub">Presented at NYU School of Law, "Fiduciary Duties and AI" workshop (Information Law Institute + GliaNet Alliance), 2026. Maps the four fiduciary duties to four verifiable layers.</span></span>
+        <span class="chip chip--pub">NYU School of Law</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/work-nyu-fiduciary.jpg" alt="Presenting The Fiduciary's Footprint at NYU School of Law">
+        <figcaption class="kicker num">Exhibit · NYU School of Law · 2026</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">Contributor, MIT FutureTech AI Risk Initiative
+          <span class="sub">Prioritizing the Risks from Artificial Intelligence, a Delphi study of 272 experts across 37 countries ranking 24 AI risks by severity, exposure, and responsibility; the structural gap between who carries AI risk and who can reduce it (airisk.mit.edu/priorities).</span></span>
+        <span class="chip chip--pub">MIT FutureTech</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/work-mit.jpg" alt="MIT FutureTech AI Risk Initiative exhibit photo">
+        <figcaption class="kicker num">Exhibit · MIT FutureTech · 2026</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">Attest
+          <span class="sub">Working Certificate of Action prototype built at the Legal Quants (LQ002) hackathon; live tamper-evidence across an agent pipeline.</span></span>
+        <a class="chip chip--pub" href="https://www.legalquants.com/lawyers/ken-priore">Legal Quants</a>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/work-attest.jpg" alt="Attest prototype at the Legal Quants hackathon">
+        <figcaption class="kicker num">Exhibit · Legal Quants · 2026</figcaption>
+      </figure></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <div class="pub-kicker kicker"><b>Speaking</b></div>
+    <ul class="pubs num">
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">"Governing Agents Before the Rules Are Written," on agent accountability, audit trails, and cross-disciplinary governance, San Francisco</span>
+        <span class="chip chip--talk">BSA</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-bsa-2026.jpg" alt="Speaking at the BSA event in San Francisco">
+        <figcaption class="kicker num">Exhibit · BSA · 2026</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"The Convergence of AI and IP: Policy Frameworks That Actually Work," with María José Cordero (ElevenLabs), Christopher A. Suarez (Steptoe), and Scout Moran (Superhuman); recurring faculty on AI governance and AI/IP</span>
+        <span class="chip chip--talk">PLI California</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-pli-2025.jpg" alt="Speaking at PLI California">
+        <figcaption class="kicker num">Exhibit · PLI California · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"AI Governance as a Driver of Innovation Amidst Regulatory Flux," presented with Bret Cohen (Hogan Lovells) and Saima Fancy (Adobe), San Diego</span>
+        <span class="chip chip--talk">IAPP P.S.R.</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-iapp-2025.jpg" alt="Speaking at IAPP P.S.R. in San Diego">
+        <figcaption class="kicker num">Exhibit · IAPP P.S.R. · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">In-house AI governance panel, moderated by Cynthia Cwik (JAMS), with Matt Samuels (Anthropic), Roy Wang (Eightfold AI), and Belinda Luu (Kaiser Permanente)</span>
+        <span class="chip chip--talk">ABA AI &amp; Robotics</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-aba-2025.jpg" alt="On the in-house AI governance panel at ABA AI and Robotics">
+        <figcaption class="kicker num">Exhibit · ABA AI &amp; Robotics · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"Where AI Autonomy Meets Legal Reality," agentic AI program</span>
+        <span class="chip chip--talk">Stanford Law School</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-stanford-2025.jpg" alt="Speaking at Stanford Law School">
+        <figcaption class="kicker num">Exhibit · Stanford Law School · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2024</span>
+        <span class="t">"Developing AI Policy and Governance for IP": building a practical AI governance framework, from mission and KPIs to interdisciplinary committees and internal controls</span>
+        <span class="chip chip--talk">PLI</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-pli-2024.jpg" alt="Presenting Developing AI Policy and Governance for IP at PLI">
+        <figcaption class="kicker num">Exhibit · PLI · 2024</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2024</span>
+        <span class="t">Privacy KnowledgeNet with Loyola Law School and the Loyola Privacy Rights Association, Los Angeles</span>
+        <span class="chip chip--talk">IAPP KnowledgeNet</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-iapp-knowledgenet-2024.jpg" alt="Privacy KnowledgeNet at Loyola Law School in Los Angeles">
+        <figcaption class="kicker num">Exhibit · IAPP KnowledgeNet · 2024</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2023</span>
+        <span class="t">Co-hosted a breakout session on generative AI: risk assessment, tool onboarding, and governance strategies for in-house counsel</span>
+        <span class="chip chip--talk">DeputyGC Summit</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-deputygc-2023.jpg" alt="Co-hosting the generative AI breakout at the DeputyGC Summit">
+        <figcaption class="kicker num">Exhibit · DeputyGC Summit · 2023</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2022</span>
+        <span class="t">Guest lecturer, privacy concentration taught by Amy Gajda, Tulane Law School</span>
+        <span class="chip chip--talk">Tulane Law</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-tulane-2022.jpg" alt="Guest lecturing at Tulane Law School">
+        <figcaption class="kicker num">Exhibit · Tulane Law · 2022</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2022</span>
+        <span class="t">Risk-strategy presentations at the first post-pandemic National Deputy GC conference, New York</span>
+        <span class="chip chip--talk">TechGC Summit</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-techgc-2022.jpg" alt="Presenting at the TechGC Summit in New York">
+        <figcaption class="kicker num">Exhibit · TechGC Summit · 2022</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y num">2012–2015</span>
+        <span class="t">Startup Policy Lab: Crowdfunding; a discussion series on equity crowdfunding and SEC rulemaking for the startup community</span>
+        <span class="chip chip--talk">Startup Policy Lab</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-spl-2012.jpg" alt="Startup Policy Lab crowdfunding discussion series">
+        <figcaption class="kicker num">Exhibit · Startup Policy Lab · 2012–2015</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2012</span>
+        <span class="t">"Privacy and the Many Layers of Mobile Platforms," Conference on Mobile and Location Privacy (Information Law Institute + Princeton CITP), roundtable moderated by Julia Angwin</span>
+        <span class="chip chip--talk">NYU School of Law</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-nyu-2012.jpg" alt="Roundtable at the NYU Conference on Mobile and Location Privacy">
+        <figcaption class="kicker num">Exhibit · NYU School of Law · 2012</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2011</span>
+        <span class="t">Participant, SEC Government-Business Forum on Small Business Capital Formation</span>
+        <span class="chip chip--talk">SEC</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-sec-2011.jpg" alt="SEC Government-Business Forum on Small Business Capital Formation">
+        <figcaption class="kicker num">Exhibit · SEC · 2011</figcaption>
+      </figure></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <div class="pub-kicker kicker"><b>In conversation</b></div>
+    <ul class="pubs num">
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"The Art of Decision Ownership": decision ownership, embedding legal upstream, and psychological safety in legal teams. Co-hosted with Jessica Nguyen.</span>
+        <span class="chip chip--talk">In-House Podcast</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-inhouse-ownership.jpg" alt="Recording The Art of Decision Ownership">
+        <figcaption class="kicker num">Exhibit · In-House Podcast · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"Harnessing AI to Elevate Legal Talent," with Sandy MacDonnell and Krysta Johnson of Docusign, on legal ops as a strategic function</span>
+        <span class="chip chip--talk">In-House Podcast</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-inhouse-legaltalent.jpg" alt="Recording Harnessing AI to Elevate Legal Talent">
+        <figcaption class="kicker num">Exhibit · In-House Podcast · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2025</span>
+        <span class="t">"AI is getting very good at acting like a lawyer. It isn't one," with Jenny Hamilton, Chief Legal Officer of Exterro</span>
+        <span class="chip chip--talk">In-House Podcast</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-inhouse-lawyer.jpg" alt="Recording AI is getting very good at acting like a lawyer. It isn't one">
+        <figcaption class="kicker num">Exhibit · In-House Podcast · 2025</figcaption>
+      </figure></li>
+      <li><div class="prow">
+        <span class="y">2024</span>
+        <span class="t">"Developing an AI Use Policy," a three-part series on moving from principles to guardrails teams use</span>
+        <span class="chip chip--talk">Briefly</span>
+      </div>
+      <figure class="exhibit" hidden>
+        <img data-src="assets/photos/talk-briefly-aipolicy.jpg" alt="Recording the Developing an AI Use Policy series">
+        <figcaption class="kicker num">Exhibit · Briefly · 2024</figcaption>
+      </figure></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <div class="pub-kicker kicker"><b>Education &amp; credentials</b></div>
+    <ul class="pubs num">
+      <li><div class="prow">
+        <span class="y"></span>
+        <span class="t">Tulane University Law School · JD, Law</span>
+        <span class="chip chip--cred">JD</span>
+      </div></li>
+      <li><div class="prow">
+        <span class="y"></span>
+        <span class="t">Tufts University · BA, History &amp; Political Science</span>
+        <span class="chip chip--cred">BA</span>
+      </div></li>
+      <li><div class="prow">
+        <span class="y"></span>
+        <span class="t">IAPP · CIPP/E</span>
+        <span class="chip chip--cred">CIPP/E</span>
+      </div></li>
+      <li><div class="prow">
+        <span class="y">2026</span>
+        <span class="t">UC Law SF / LexLab · Law and Artificial Intelligence Certificate</span>
+        <span class="chip chip--cred">Certificate</span>
+      </div></li>
+    </ul>
+  </div>
+
+  <!-- 6 · Capabilities -->
+  <div class="sect" id="capabilities">
+    <h2><svg class="sect-icon" aria-hidden="true"><use href="#i-framework"></use></svg>Capabilities</h2>
+    <span class="kicker">Three columns of practice</span>
+  </div>
+  <div class="caps">
+    <div class="cap cap--counsel">
+      <svg class="icon" aria-hidden="true"><use href="#i-negotiate"></use></svg>
+      <h3>Counsel &amp; product</h3>
+      <ul>
+        <li>Product and AI governance across the ML lifecycle</li>
+        <li>Responsible-AI, legal-by-design, and privacy-by-design</li>
+        <li>Global privacy programs (GDPR, CCPA, CPRA)</li>
+        <li>IP portfolio stewardship and open-source compliance</li>
+        <li>AI and IP policy frameworks</li>
+      </ul>
+    </div>
+    <div class="cap cap--platforms">
+      <svg class="icon" aria-hidden="true"><use href="#i-route"></use></svg>
+      <h3>Platforms &amp; agents</h3>
+      <ul>
+        <li>Platform, ISV, and channel transactions</li>
+        <li>Partner programs and GTM frameworks, US and international</li>
+        <li>Marketplace privacy at 5,000+ partner scale</li>
+        <li>Board-level public-cloud migration (GCP)</li>
+        <li>IoT hardware/software and complex technology agreements</li>
+      </ul>
+    </div>
+    <div class="cap cap--records">
+      <svg class="icon" aria-hidden="true"><use href="#i-ledger"></use></svg>
+      <h3>Records &amp; proof</h3>
+      <ul>
+        <li>Certificate of Action: a tamper-evident record of agent conduct</li>
+        <li>Fiduciary duties mapped to verifiable layers</li>
+        <li>Agent accountability and audit trails</li>
+        <li>Live tamper-evidence across an agent pipeline (Attest)</li>
+        <li>EU AI Act and NIST AI RMF mapping</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<!-- 8 · Footer -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div class="fcol" style="--hue:#4A6FA5">
+        <span class="kicker"><svg class="foot-icon" aria-hidden="true"><use href="#i-draft"></use></svg><b>Read</b></span>
+        <ul>
+          <li><a class="link-com" href="https://kenpriore.com">kenpriore.com</a></li>
+          <li><a href="https://kenpriore.com/tag/signals/">Signals</a></li>
+          <li><a href="https://kenpriore.com/tag/reflections/">Reflections</a></li>
+          <li><a href="https://kenpriore.com/tag/foundations/">Foundations</a></li>
+        </ul>
+      </div>
+      <div class="fcol" style="--hue:#FF7F50">
+        <span class="kicker"><svg class="foot-icon" aria-hidden="true"><use href="#i-node"></use></svg><b>Interactive</b></span>
+        <ul>
+          <li><a class="link-ai" href="https://kenpriore.ai">kenpriore.ai</a></li>
+          <li><a href="https://mindthegap.kenpriore.ai">Mind the Gap</a></li>
+          <li><a href="https://mindthemoat.kenpriore.ai">Mind the Moat</a></li>
+        </ul>
+      </div>
+      <div class="fcol" style="--hue:#D4A24C">
+        <span class="kicker"><svg class="foot-icon" aria-hidden="true"><use href="#i-attest"></use></svg><b>On the record</b></span>
+        <ul>
+          <li><a href="#statement">Statement</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#on-the-record">Papers &amp; speaking</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="https://www.legalquants.com/lawyers/ken-priore">Legal Quants profile</a></li>
+          <li><a href="https://kenpriore.com/about/">About Ken</a></li>
+        </ul>
+      </div>
+      <div class="fcol" style="--hue:#C76B7E">
+        <span class="kicker"><svg class="foot-icon" aria-hidden="true"><use href="#i-signal"></use></svg><b>Follow</b></span>
+        <ul>
+          <li><a href="https://kenpriore.com/rss/">Subscribe / RSS</a></li>
+          <li><a href="https://www.linkedin.com/in/kennethpriore">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="meta-line num">San Francisco Bay Area ·
+      <a href="mailto:ken@kenpriore.com">ken@kenpriore.com</a> ·
+      <a href="https://www.linkedin.com/in/kennethpriore">linkedin.com/in/kennethpriore</a> ·
+      <a class="link-ai" href="https://ai4law.kenpriore.ai">ai4law.kenpriore.ai</a> ·
+      <a class="link-com" href="https://kenpriore.com">kenpriore.com</a></p>
+    <div class="colo">
+      <span class="kicker num">© 2026 Ken Priore · Personal views · Not legal advice</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+
+  /* Portrait: try to load; on success insert the img, on failure the flat
+     fill-soft plate stays. */
+  document.querySelectorAll('.plate[data-photo]').forEach(function(plate){
+    var img=new Image();
+    img.onload=function(){
+      img.alt=plate.getAttribute('data-alt')||'';
+      plate.appendChild(img);
+    };
+    img.src=plate.getAttribute('data-photo');
+  });
+
+  /* Optional exhibits: probe each data-src; a photo that loads reveals its
+     figure, a missing photo leaves the figure hidden. No fallback plates. */
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('figure.exhibit').forEach(function(fig){
+      var img=fig.querySelector('img[data-src]');
+      if(!img){return;}
+      var probe=new Image();
+      probe.onload=function(){
+        img.src=img.getAttribute('data-src');
+        fig.removeAttribute('hidden');
+      };
+      probe.src=img.getAttribute('data-src');
+    });
+  });
+
+  /* Career ledger: one row open at a time, hard cut. */
+  var ledger=document.getElementById('ledger');
+  var rows=Array.prototype.slice.call(ledger.querySelectorAll(':scope > li'));
+  function closeAll(){
+    rows.forEach(function(li){
+      li.classList.remove('open');
+      li.querySelector('.rowhead').setAttribute('aria-expanded','false');
+    });
+  }
+  rows.forEach(function(li){
+    var head=li.querySelector('.rowhead');
+    head.addEventListener('click',function(){
+      var wasOpen=li.classList.contains('open');
+      closeAll();
+      if(!wasOpen){
+        li.classList.add('open');
+        head.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){closeAll();}
+  });
+
+  /* Filter tabs: instant hard-cut filtering. */
+  document.querySelectorAll('.tabs button').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.tabs button').forEach(function(t){
+        t.setAttribute('aria-pressed',t===tab?'true':'false');
+      });
+      var f=tab.getAttribute('data-filter');
+      rows.forEach(function(li){
+        var show=(f==='all')||li.getAttribute('data-track')===f;
+        li.classList.toggle('hidden',!show);
+        if(!show&&li.classList.contains('open')){
+          li.classList.remove('open');
+          li.querySelector('.rowhead').setAttribute('aria-expanded','false');
+        }
+      });
+    });
+  });
+
+  /* Print + copy email. */
+  document.getElementById('btn-print').addEventListener('click',function(){
+    window.print();
+  });
+  var confirmEl=document.getElementById('copy-confirm');
+  var confirmTimer=null;
+  document.getElementById('btn-copy').addEventListener('click',function(){
+    var addr='ken@kenpriore.com';
+    function done(){
+      confirmEl.classList.add('show');
+      if(confirmTimer){clearTimeout(confirmTimer);}
+      confirmTimer=setTimeout(function(){confirmEl.classList.remove('show');},1920);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(addr).then(done,done);
+    }else{
+      var ta=document.createElement('textarea');
+      ta.value=addr;document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');}catch(e){}
+      document.body.removeChild(ta);done();
+    }
+  });
+
+  /* Baseline: draw in once on first view; settled under reduced motion. */
+  var baseline=document.getElementById('baseline');
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced||!('IntersectionObserver' in window)){
+    baseline.classList.add('drawn');
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          baseline.classList.add('drawn');
+          io.disconnect();
+        }
+      });
+    },{threshold:0.1});
+    io.observe(ledger);
+  }
+})();
+</script>
+</body>
+</html>

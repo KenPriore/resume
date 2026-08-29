@@ -1,0 +1,489 @@
+/* ==========================================================================
+   On the Record — Ken Priore resume site
+   Signal v2 family · white ground · structure from rules · one red element
+   ========================================================================== */
+
+:root{
+  --paper:#FFFFFF; --ink:#0A0A0A; --ink-soft:#333333; --muted:#6B6B6B;
+  --line:#D9D9D9; --line-firm:var(--ink); --fill-soft:#F4F4F4;
+  --c-red:#FF0000; --c-blue:#0057B8; --c-yellow:#FFCC00;
+  --ill-slate:#4A6FA5; --ill-rose:#C76B7E; --ill-mustard:#D4A24C;
+  --ill-orange:#FF7F50; --ill-sage:#7CA982;
+  --hue:var(--ill-mustard);
+  --container:1180px; --inset:clamp(20px,5vw,72px);
+  --sans:"Archivo","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --beat:480ms;
+  --ease-cut:cubic-bezier(0.2,0.7,0.2,1);
+  --ease-snap:cubic-bezier(0.2,0,0,1);
+}
+*{box-sizing:border-box;border-radius:0!important}
+
+/* ---- base ---------------------------------------------------------------- */
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--paper);
+  font-size:16px;line-height:1.5;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,p,ul,ol,figure{margin:0;padding:0}
+ul{list-style:none}
+a{color:var(--c-blue)}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--inset)}
+.num{font-variant-numeric:tabular-nums}
+.kicker{
+  font-weight:700;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);
+}
+.kicker b{color:var(--ink);font-weight:700}
+.sr-only{
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;
+}
+
+/* ---- masthead ------------------------------------------------------------ */
+.masthead{border-bottom:4px solid var(--line-firm)}
+/* .mast also carries .wrap; its own padding shorthand would cancel the
+   container inset, so the inset is restated here rather than dropped. */
+.mast{display:flex;align-items:center;justify-content:space-between;
+  padding:18px var(--inset)}
+.mark{display:flex;align-items:center;gap:14px}
+.wordmark{font-weight:800;font-size:20px;letter-spacing:-0.02em}
+.wordmark small{
+  display:block;font-weight:700;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);margin-top:2px;
+}
+.loop-orbit{transform-origin:17px 17px}
+.js .loop-orbit{animation:orbit calc(var(--beat)*2) var(--ease-snap) 1 both}
+@keyframes orbit{from{transform:rotate(-360deg)}to{transform:rotate(0deg)}}
+
+nav.site{display:flex;gap:28px}
+nav.site a{
+  font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+nav.site a:hover{border-bottom-color:var(--ink)}
+nav.site a.active{border-bottom-color:var(--c-blue)}
+nav.site a.link-com:hover{border-bottom-color:var(--ill-slate);color:var(--ill-slate)}
+nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-orange)}
+
+/* ---- statement + fig 01 -------------------------------------------------- */
+/* The name takes a full-width row of its own; the body text and the portrait
+   share the row beneath it, so the photo's top edge lines up with the first
+   line of prose rather than with the top of the display type. The 26px row-gap
+   replaces the first lede's own margin, which would otherwise push the text
+   below the plate and break that alignment. */
+.statement{
+  display:grid;grid-template-columns:7fr 5fr;
+  column-gap:56px;row-gap:26px;
+  padding:56px 0 52px;align-items:start;
+}
+.st-head{grid-column:1/-1}
+/* CHANGE 5 — the page kicker rides in the h1's full-width row, above the
+   name, so the portrait still starts level with the first line of prose. */
+.page-kicker{display:block;margin-bottom:18px}
+.st-body{grid-column:1;min-width:0}
+.st-body .lede:first-child{margin-top:0}
+.statement .fig{grid-column:2}
+.statement h1{
+  font-weight:800;font-size:clamp(48px,7vw,92px);
+  line-height:.95;letter-spacing:-0.02em;
+}
+.now{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.now-dot{width:10px;height:10px;background:var(--c-red);flex:none}
+.lede{
+  margin-top:26px;max-width:56ch;font-size:19px;line-height:1.55;
+  color:var(--ink-soft);
+}
+.lede strong{color:var(--ink);font-weight:700}
+.lede + .lede{margin-top:16px}
+.meta-line{
+  margin-top:22px;padding-top:16px;border-top:2px solid var(--line-firm);
+  font-weight:700;font-size:13px;color:var(--muted);letter-spacing:0;
+}
+.meta-line a{color:var(--c-blue);text-decoration:none}
+.meta-line a:hover{text-decoration:underline}
+.meta-line a.link-com{color:var(--ill-slate)}
+.meta-line a.link-ai{color:var(--ill-orange)}
+
+.fig{border:2px solid var(--line-firm)}
+.fig .plate{
+  position:relative;aspect-ratio:4/5;background:var(--fill-soft);
+  overflow:hidden;
+}
+/* KenPrioreHeadshot.png is 1272x1100 (1.156:1), wider than the 4:5 plate, so
+   cover scales it to full height and crops 30.8% of the WIDTH. The vertical
+   anchor is therefore inert for this file — only X does anything today. X=46%
+   is measured, not eyeballed: the head spans x 0.34-0.64 of the source, centre
+   0.489, and 46% is the offset that lands that centre on the plate's midline
+   while still keeping the far shoulder (source x 0.80) inside the frame. Y=22%
+   is the measured eye line (the lens reflections sit at y 0.218-0.232), kept
+   here so a taller replacement portrait crops to the eyes instead of the chin. */
+.fig .plate img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:46% 22%;display:block;
+}
+/* ---- motif band ---------------------------------------------------------- */
+/* Construction copied from the shipped kenpriore.com theme
+   (signal-kenpriore/assets/css/screen.css): six marks, 4px rule above, 2px
+   below, hairline dividers between, 54px. Ink only here — the resume site
+   takes the marks flat, so --signal and --emphasis both resolve to ink. Still;
+   no motion, no fill beyond currentColor. */
+.motifband{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  border-top:4px solid var(--line-firm);
+  border-bottom:2px solid var(--line-firm);padding:22px 0;
+}
+.motifband .m{
+  display:flex;align-items:center;justify-content:center;
+  border-left:1px solid var(--line);
+}
+.motifband .m:first-child{border-left:none}
+.motifband svg{
+  width:54px;height:54px;color:var(--ink);
+  --signal:var(--ink);--emphasis:var(--ink);
+}
+
+.fig .figbar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  border-top:2px solid var(--line-firm);padding:8px 12px;
+}
+
+/* ---- section heads ------------------------------------------------------- */
+.sect{
+  display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+  padding:44px 0 12px;border-bottom:2px solid var(--hue);
+}
+.sect h2{font-weight:800;font-size:24px;letter-spacing:-0.02em}
+.sect-icon{
+  width:20px;height:20px;color:var(--ink);
+  vertical-align:-2px;margin-right:10px;
+}
+
+/* ---- affordance bar (tabs + tools) --------------------------------------- */
+.tools{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.tabs{display:flex;gap:24px}
+.tabs button{
+  font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);background:none;border:none;
+  padding:2px 0;border-bottom:2px solid transparent;cursor:pointer;
+}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--hue)}
+.actions{display:flex;align-items:center;gap:14px}
+.actions .btn{
+  font-family:var(--sans);font-weight:800;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink);background:var(--paper);
+  border:2px solid var(--line-firm);padding:9px 18px;cursor:pointer;
+}
+.actions .btn:hover{background:var(--ink);color:var(--paper)}
+.copy-confirm{display:none}
+.copy-confirm.show{display:inline}
+
+/* ---- the record (career ledger) ------------------------------------------ */
+.ledger-wrap{position:relative}
+/* The rule sits inside the year column, clear of the year text. The widest
+   year, "2021-2023", measures 83.75px at 15px/800 and starts 14px in (4px li
+   border + 10px rowhead pad), so it ends at 97.75; 106 leaves 8.25px of air.
+   The column itself ends at 124 and the role column starts at 144, so the
+   rule still reads as belonging to the year side. Move the tick with it. */
+.baseline{
+  position:absolute;top:0;bottom:0;left:106px;width:1px;
+  background:var(--ink);transform-origin:top;pointer-events:none;
+}
+.js .baseline{transform:scaleY(0)}
+.js .baseline.drawn{
+  transform:scaleY(1);
+  transition:transform calc(var(--beat)*2) var(--ease-snap);
+}
+.ledger>li{
+  position:relative;border-bottom:1px solid var(--line);
+  border-left:4px solid transparent;
+}
+.ledger>li::before{ /* dimension tick on the baseline */
+  /* left is baseline-8: the tick starts 4px left of the rule (it is measured
+     from the li padding box, which the 4px border pushes in) and runs 5px past
+     it, so it crosses rather than merely touches. Keep the -8 if either moves. */
+  content:"";position:absolute;left:98px;top:0;width:9px;height:1px;
+  background:var(--ink);
+}
+/* Open state is the complement of the row's own icon: a rose-icon row opens
+   slate, a slate-icon row opens rose. The icon keeps its hue on the tinted
+   bar, so the pair reads as one deliberate two-colour system rather than a
+   single highlight colour applied everywhere. */
+.ledger>li.tone-human.open{border-left-color:var(--ill-slate)}
+.ledger>li.tone-human.open .rowhead{background:rgba(74,111,165,.14)}
+.ledger>li.tone-inst.open{border-left-color:var(--ill-rose)}
+.ledger>li.tone-inst.open .rowhead{background:rgba(199,107,126,.14)}
+.js .ledger>li.open .rowhead:hover{background:var(--ink)}
+
+.rowhead{
+  /* year · role · org, one line each. The year stays 110px and the gap stays
+     20px: .detail{padding-left:140px} is derived from 10px pad + 110 + 20.
+     Org is the fixed column and it sits at the right, so the row is anchored
+     at both ends and the role takes the slack. 296px because the longest org,
+     "CARROLL BURDICK & McDONOUGH", measures 259.5px at 13px/800/.06em plus a
+     26px icon and gutter = 285.5 (278 in the Helvetica Neue fallback). Role
+     needs 315.4px for "Director of Privacy · Product & Compliance" (320.1 in
+     the fallback); those are the figures for the <=1100 tier below. Its floor
+     moved from 901 to 881 when the breakpoint went 900 -> 880, so the 1fr now
+     leaves the role 318.9px at the floor and 516px at 1100 (both measured
+     2026-08-29 in Archivo). That is 3.5px of slack at 881. In the Helvetica
+     Neue fallback the longest role runs about 1.2px into the 20px gutter
+     between 881 and ~882px of viewport: nothing clips, nothing overlaps the
+     org column, and the page does not scroll sideways. Fixed org column = the org text, and so the
+     icon, starts at the same x on all thirteen rows. */
+  display:grid;grid-template-columns:110px minmax(0,1fr) 336px;gap:20px;
+  align-items:baseline;width:100%;padding:18px 14px 18px 10px;
+  font-family:var(--sans);text-align:left;background:none;border:none;
+  color:var(--ink);cursor:pointer;font-size:18px;line-height:1.45;
+}
+/* Type went up one step (role 16→18, org 13→15), so both fixed measures grew
+   with it: the longest org, "CARROLL BURDICK & McDONOUGH", scales from 259.5px
+   to ~299px at 15px/800/.06em, plus the 26px icon and gutter = ~325, so the org
+   column is 336 (measured 325.4 in Archivo, 317.0 in the fallback). The longest
+   role, "Director of Privacy · Product & Compliance", needs 354.8px at 18px
+   (360.1 in the fallback); the 1fr gives it 522px at 1440 and 476.9px at 1101.
+   The 18/15 row would first break around a 971px viewport, so the rule further
+   down steps the type back to 16/13 at 1100 with room to spare. */
+.rowhead .y{font-weight:800;font-size:15px;color:var(--muted)}
+.rowhead .r{font-weight:700;letter-spacing:-0.01em;white-space:nowrap}
+.rowhead .o{font-weight:800;font-size:15px;letter-spacing:.06em;white-space:nowrap}
+.row-icon{
+  width:18px;height:18px;color:var(--ink);
+  vertical-align:-5px;margin-right:8px;
+}
+/* Two-tone by semantic group. Rose = work about people; slate = work about
+   markets and institutions. Same specificity as .row-icon (0,1,0), so these
+   must stay below it in source order. The hover-invert rule underneath is
+   (0,4,0) and still wins without !important. */
+.row-icon--human{color:var(--ill-rose)}
+.row-icon--inst{color:var(--ill-slate)}
+.js .rowhead:hover{background:var(--ink);color:var(--paper)}
+.js .rowhead:hover .y{color:var(--paper)}
+.js .rowhead:hover .row-icon{color:var(--paper)}
+.rowhead:focus-visible{outline:2px solid var(--c-blue);outline-offset:-2px}
+
+/* the expansion hangs off the title column, right of the baseline rule:
+   10px rowhead pad + 110px year column + 20px grid gap = 140px, which is
+   exactly where .rowhead .r starts. Keep these in step if the grid changes. */
+.detail{padding:6px 14px 26px 140px;position:relative;z-index:1;background:var(--paper)}
+.bullets{max-width:78ch}
+.bullets li{
+  position:relative;padding:9px 0 9px 18px;border-top:1px solid var(--line);
+  font-size:15px;line-height:1.55;color:var(--ink-soft);
+}
+.bullets li:first-child{border-top:none}
+.bullets li::before{
+  content:"";position:absolute;left:0;top:16px;width:8px;height:2px;
+  background:var(--ink);
+}
+.bullets em{font-style:normal;font-weight:700;color:var(--ink)}
+
+/* narrative: prose replacement for the bullets block */
+.narrative{
+  /* CHANGE 1 — reading measure. Spec 3: 66ch for prose. The frame (.detail)
+     keeps its full width and the 140px left inset; only the line length is
+     bound. .docket stays max-width:none so its right-aligned dates keep the
+     full-width anchor. */
+  max-width:66ch;font-size:15px;line-height:1.6;color:var(--ink-soft);
+  padding-top:10px;
+  /* flush both edges. hyphenation is not optional here: justifying without it
+     opens rivers around long compounds ("sustainable-investing"). Needs the
+     lang attribute on <html>, which is set. */
+  text-align:justify;
+  -webkit-hyphens:auto;hyphens:auto;
+  hyphenate-limit-chars:7 4 3;
+}
+.narrative + .narrative{margin-top:10px}
+
+/* docket: role progression inside a row's expansion */
+.docket{border-top:2px solid var(--line-firm);margin-bottom:12px;max-width:none}
+.docket li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  padding:8px 0;border-bottom:1px solid var(--line);
+}
+.docket .dr{font-weight:700;font-size:14px;letter-spacing:-0.01em}
+.docket .dd{
+  font-weight:700;font-size:13px;color:var(--muted);white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+
+/* optional exhibits on "On the record" entries; hidden until the photo loads,
+   same treatment as the portrait: squared, 2px ink border, kicker caption bar */
+.exhibit{border:2px solid var(--line-firm)}
+.exhibit[hidden]{display:none}
+.exhibit img{display:block;width:100%;height:auto;filter:grayscale(1)}
+.exhibit figcaption{display:block;border-top:2px solid var(--line-firm);padding:8px 12px}
+.pubs .exhibit{margin:0 14px 16px 130px;max-width:440px}
+
+/* closed/open state — hard cut, no easing */
+.js .ledger>li>.detail{display:none}
+.js .ledger>li.open>.detail{display:block}
+.js .ledger>li.hidden{display:none}
+
+/* ---- on the record (publications ledger) --------------------------------- */
+.pub-group{margin-top:6px}
+.pub-kicker{padding:20px 0 6px;border-bottom:1px solid var(--line)}
+.pubs>li{border-bottom:1px solid var(--line)}
+.pubs .prow{
+  display:grid;grid-template-columns:110px 1fr auto;gap:20px;
+  align-items:baseline;padding:15px 14px 15px 10px;
+}
+.pubs .y{font-weight:800;font-size:14px;color:var(--muted)}
+.pubs .t{font-weight:700;font-size:16px;letter-spacing:-0.01em}
+.pubs .t .sub{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;max-width:72ch}
+.chip{
+  font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);border:1px solid var(--hue);padding:4px 10px;white-space:nowrap;
+}
+/* venue chips typed by kind: publication / speaking / credential */
+.chip--pub{border-color:var(--ill-slate);color:var(--ill-slate)}
+.chip--talk{border-color:var(--ill-rose);color:var(--ill-rose)}
+.chip--cred{border-color:var(--ill-mustard);color:var(--ill-mustard)}
+/* linked chips invert ink-on-paper on hover, per motion doctrine */
+a.chip{text-decoration:none}
+a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ---- capabilities -------------------------------------------------------- */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:30px 0 10px}
+.cap{border-top:2px solid var(--line-firm);padding-top:18px}
+.cap--counsel{border-top-color:var(--ill-slate)}
+.cap--platforms{border-top-color:var(--ill-orange)}
+.cap--records{border-top-color:var(--ill-mustard)}
+.cap .icon{width:28px;height:28px;display:block;margin-bottom:14px;color:var(--ink)}
+.cap h3{font-weight:800;font-size:17px;letter-spacing:-0.01em;margin-bottom:12px}
+.cap ul li{
+  border-top:1px solid var(--line);padding:8px 0;
+  font-size:14px;line-height:1.5;color:var(--ink-soft);
+}
+.cap ul li:first-child{border-top:none}
+
+/* ---- footer -------------------------------------------------------------- */
+.site-foot{border-top:4px solid var(--line-firm);margin-top:64px}
+.foot-cols{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:34px 0 10px;
+}
+/* CHANGE 3 — hue-ruled footer columns: Read slate, Interactive orange,
+   On the record mustard, Follow rose. The rule sits BELOW the column head,
+   matching the shipped kenpriore.com footer (.fc .fh border-bottom), not
+   above the column. Each column carries its own --hue. */
+.foot-cols .kicker{display:block;margin-bottom:12px}
+.foot-cols .fcol>.kicker{
+  border-bottom:3px solid var(--hue);padding-bottom:9px;margin-bottom:12px;
+}
+.foot-cols .fcol a:hover{color:var(--hue)}
+.foot-icon{
+  width:16px;height:16px;color:var(--muted);
+  vertical-align:-4px;margin-right:6px;
+}
+.foot-cols ul li{padding:5px 0;font-size:14px}
+.foot-cols a{color:var(--ink);text-decoration:none;font-weight:500}
+.foot-cols a:hover{color:var(--c-blue);text-decoration:underline}
+.foot-cols a.link-com{color:var(--ill-slate)}
+.foot-cols a.link-ai{color:var(--ill-orange)}
+/* contact rule: full width, firm 2px rule above it, sitting directly on top
+   of the hairline colophon. Heavy rule → contact → hairline → colophon. */
+.meta-line{
+  margin-top:26px;padding-top:14px;border-top:2px solid var(--line-firm);
+  font-weight:700;font-size:13px;line-height:1.6;color:var(--muted);
+  letter-spacing:0;
+}
+.meta-line a{color:var(--c-blue);text-decoration:none}
+.meta-line a:hover{text-decoration:underline}
+.meta-line a.link-com{color:var(--ill-slate)}
+.meta-line a.link-ai{color:var(--ill-orange)}
+.colo{
+  /* CHANGE 4 — colophon matches the live site of record: one centered line. */
+  display:flex;justify-content:center;align-items:baseline;gap:14px;
+  text-align:center;
+  padding:16px 0 56px;border-top:1px solid var(--line);margin-top:16px;
+  flex-wrap:wrap;
+}
+
+/* ---- responsive ---------------------------------------------------------- */
+/* Between 881 and 1100 the role column loses the room the larger type needs,
+   so the row steps back to the smaller measures rather than clipping. */
+@media (max-width:1100px){
+  .rowhead{grid-template-columns:110px minmax(0,1fr) 296px;font-size:16px}
+  .rowhead .y,.rowhead .o{font-size:13px}
+}
+/* CHANGE 6 — breakpoint 900 -> 880, inside the 820-880 band the spec sets. */
+@media (max-width:880px){
+  body{overflow-x:clip}
+  /* restate the inset here too: this shorthand would otherwise put the
+     masthead back at x=0 while the main column below stays inset. */
+  .mast{flex-wrap:wrap;gap:14px 24px;padding:14px var(--inset)}
+  nav.site{flex-wrap:wrap;gap:10px 18px;width:100%;
+    border-top:1px solid var(--line);padding-top:12px}
+  /* one column: the portrait must fall back into column 1, or its explicit
+     grid-column:2 would conjure an implicit second column and overflow. */
+  .statement{grid-template-columns:1fr;gap:36px}
+  .st-body,.statement .fig{grid-column:1}
+  .rowhead{grid-template-columns:84px minmax(0,1fr);row-gap:4px}
+  .rowhead .o{grid-column:2}
+  .rowhead .r,.rowhead .o{white-space:normal;overflow-wrap:anywhere}
+  /* Same derivation at the smaller measure: the year is 13px here, so the
+     widest string ends at 86.59 and the 84px column ends at 98. 94 gives
+     7.41px of air and still lands inside the column; 78 put the rule through
+     the middle of the year text. Tick stays baseline-8. */
+  .baseline{left:94px}
+  .ledger>li::before{left:86px}
+  .detail{padding:6px 14px 24px 10px}
+  .pubs .prow{grid-template-columns:84px 1fr;row-gap:6px}
+  .pubs .chip{grid-column:2;justify-self:start}
+  .pubs .exhibit{margin:0 14px 16px 10px}
+  .caps{grid-template-columns:1fr;gap:28px}
+  .foot-cols{grid-template-columns:repeat(2,1fr)}
+  .tools{align-items:flex-start}
+  /* same collapse the shipped theme uses: six marks become two rows of three */
+  .motifband{grid-template-columns:repeat(3,1fr);row-gap:20px}
+  .motifband .m:nth-child(4){border-left:none}
+}
+
+/* ---- reduced motion: settled frame --------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  .js .loop-orbit{animation:none}
+  .js .baseline{transform:scaleY(1);transition:none}
+}
+
+/* ---- print: 1–2 page black-on-white CV ----------------------------------- */
+@media print{
+  body{font-size:11px;line-height:1.4;color:#000}
+  nav.site,.tools,.baseline,.fig,.exhibit,.foot-cols,.motifband,.skip{display:none!important}
+  .masthead,.site-foot{border-color:#000}
+  .statement{grid-template-columns:1fr;padding:18px 0;gap:0}
+  .statement h1{font-size:30px}
+  .lede{font-size:12px;margin-top:10px}
+  .now-dot{background:#000}
+  .sect{padding:16px 0 6px;border-bottom-color:#000}
+  .sect h2{font-size:15px}
+  .ledger>li{border-left:none}
+  .ledger>li::before{display:none}
+  .js .ledger>li>.detail,.ledger>li>.detail{display:block!important}
+  .js .ledger>li.hidden{display:block!important}
+  /* Icons are hidden in print, so the org column is text only: 259.5px at 13px.
+     The 880px rule above also fires on paper (a page is ~624px wide at 0.5in
+     margins), so .o has to be put back in the third column or it would stack
+     under the role and cost a line on every one of the thirteen rows. */
+  .rowhead{padding:8px 0;grid-template-columns:80px minmax(0,1fr) 268px;font-size:11px;background:none!important}
+  .rowhead .o{grid-column:3}
+  .detail{padding:0 0 12px 100px} /* 0 pad + 80px year col + 20px gap = .r column */
+  .bullets li{font-size:11px;padding:4px 0 4px 12px}
+  .narrative{font-size:11px;line-height:1.4;padding-top:4px;max-width:none}
+  .docket{margin-bottom:6px}
+  .docket li{padding:3px 0}
+  .docket .dr,.docket .dd{font-size:11px}
+  .pubs .prow{padding:6px 0;grid-template-columns:80px 1fr auto}
+  .pubs .t{font-size:11px}
+  .chip,.chip--pub,.chip--talk,.chip--cred{border-color:#000;color:#000;padding:2px 6px}
+  .sect-icon,.row-icon,.foot-icon{display:none}
+  .caps{grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0}
+  .cap{border-top-color:#000}
+  .cap .icon{display:none}
+  .colo{padding:12px 0;border-top-color:#000}
+  a{color:#000;text-decoration:none}
+}
