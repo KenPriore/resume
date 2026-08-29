@@ -285,11 +285,11 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 
 /* narrative: prose replacement for the bullets block */
 .narrative{
-  /* CHANGE 1 — reading measure. Spec 3: 66ch for prose. The frame (.detail)
-     keeps its full width and the 140px left inset; only the line length is
-     bound. .docket stays max-width:none so its right-aligned dates keep the
-     full-width anchor. */
-  max-width:66ch;font-size:15px;line-height:1.6;color:var(--ink-soft);
+  /* Ken's call: the prose runs the full column, flush to the right margin,
+     so it lines up with the docket rule above it and the row edge. This is
+     wider than the 66ch reading measure the spec suggests; justification plus
+     hyphenation below is what keeps the long lines from opening rivers. */
+  max-width:none;font-size:15px;line-height:1.6;color:var(--ink-soft);
   padding-top:10px;
   /* flush both edges. hyphenation is not optional here: justifying without it
      opens rivers around long compounds ("sustainable-investing"). Needs the
@@ -335,7 +335,7 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 }
 .pubs .y{font-weight:800;font-size:14px;color:var(--muted)}
 .pubs .t{font-weight:700;font-size:16px;letter-spacing:-0.01em}
-.pubs .t .sub{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;max-width:72ch}
+.pubs .t .sub{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;max-width:none}
 .chip{
   font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--ink);border:1px solid var(--hue);padding:4px 10px;white-space:nowrap;
