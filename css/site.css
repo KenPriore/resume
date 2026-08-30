@@ -97,14 +97,6 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 }
 .lede strong{color:var(--ink);font-weight:700}
 .lede + .lede{margin-top:22px}
-.meta-line{
-  margin-top:22px;padding-top:16px;border-top:2px solid var(--line-firm);
-  font-weight:700;font-size:13px;color:var(--muted);letter-spacing:0;
-}
-.meta-line a{color:var(--c-blue);text-decoration:none}
-.meta-line a:hover{text-decoration:underline}
-.meta-line a.link-com{color:var(--ill-slate)}
-.meta-line a.link-ai{color:var(--ill-orange)}
 
 .fig{border:2px solid var(--line-firm)}
 .fig .plate{
@@ -417,6 +409,9 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   margin-top:26px;padding-top:14px;border-top:2px solid var(--line-firm);
   font-weight:700;font-size:13px;line-height:1.6;color:var(--muted);
   letter-spacing:0;
+  /* centered to sit with the colophon below it, both as footer plate lines
+     rather than left-aligned body content */
+  text-align:center;
 }
 .meta-line a{color:var(--c-blue);text-decoration:none}
 .meta-line a:hover{text-decoration:underline}
