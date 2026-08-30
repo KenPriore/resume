@@ -108,20 +108,31 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 
 .fig{border:2px solid var(--line-firm)}
 .fig .plate{
-  position:relative;aspect-ratio:4/5;background:var(--fill-soft);
+  position:relative;aspect-ratio:6/7;background:var(--fill-soft);
   overflow:hidden;
 }
-/* KenPrioreHeadshot.png is 1272x1100 (1.156:1), wider than the 4:5 plate, so
-   cover scales it to full height and crops 30.8% of the WIDTH. The vertical
-   anchor is therefore inert for this file — only X does anything today. X=46%
-   is measured, not eyeballed: the head spans x 0.34-0.64 of the source, centre
-   0.489, and 46% is the offset that lands that centre on the plate's midline
-   while still keeping the far shoulder (source x 0.80) inside the frame. Y=22%
-   is the measured eye line (the lens reflections sit at y 0.218-0.232), kept
-   here so a taller replacement portrait crops to the eyes instead of the chin. */
+/* CHANGE — the plate was 4/5. It is 6/7 (0.857) so the portrait stops running
+   taller than the statement beside it; at the 404px column that is 472px of
+   plate against a 508px text column, a 32px difference instead of the 4/5
+   plate's dead heat at 505px. 6/7 is not a taste call, it is the geometric
+   floor. KenPrioreHeadshot.jpg is 1272x1100 but only x 0.017-0.871 is picture:
+   the file carries a 164px pure-black letterbox bar down the right edge, and
+   the seam is a hard 17-level step, so any crop that reaches past 0.871 draws a
+   visible black stripe. The crown also sits on row 0 with no headroom, so the
+   plate has to stay height-constrained or the top of his head is cut. Those two
+   together fix the limit: measured face centre is x 0.500, the usable symmetric
+   width around it is 2 x 472 = 944px, and 944/1100 = 0.858. 6/7 sits just under
+   that. Squarer crops black; taller wastes the balance we came for.
+   X=45% is measured, not eyeballed. It puts the face centre at 51.8% of the
+   plate — the same composition the 4/5 plate had at X=46%, so the framing does
+   not move, it only gets shorter — and leaves 7px between the frame edge and
+   the black bar. Y=22% is the measured eye line (lens reflections at y
+   0.218-0.232) and is inert while the plate is height-constrained, which it is
+   at any ratio up to 1.156; it is kept so a taller replacement portrait crops
+   to the eyes instead of the chin. */
 .fig .plate img{
   position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:46% 22%;display:block;
+  object-fit:cover;object-position:45% 22%;display:block;
 }
 /* ---- motif band ---------------------------------------------------------- */
 /* Construction copied from the shipped kenpriore.com theme
