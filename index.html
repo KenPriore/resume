@@ -138,11 +138,6 @@
       <button type="button" data-filter="operating" aria-pressed="false">Operating roles</button>
       <button type="button" data-filter="advisory" aria-pressed="false">Advisory &amp; founding</button>
     </div>
-    <div class="actions">
-      <span class="kicker copy-confirm" id="copy-confirm" role="status">Copied · ken@kenpriore.com</span>
-      <button type="button" class="btn" id="btn-copy">Copy email</button>
-      <button type="button" class="btn" id="btn-print">Print</button>
-    </div>
   </div>
 
   <div class="ledger-wrap">
@@ -762,29 +757,6 @@
         }
       });
     });
-  });
-
-  /* Print + copy email. */
-  document.getElementById('btn-print').addEventListener('click',function(){
-    window.print();
-  });
-  var confirmEl=document.getElementById('copy-confirm');
-  var confirmTimer=null;
-  document.getElementById('btn-copy').addEventListener('click',function(){
-    var addr='ken@kenpriore.com';
-    function done(){
-      confirmEl.classList.add('show');
-      if(confirmTimer){clearTimeout(confirmTimer);}
-      confirmTimer=setTimeout(function(){confirmEl.classList.remove('show');},1920);
-    }
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(addr).then(done,done);
-    }else{
-      var ta=document.createElement('textarea');
-      ta.value=addr;document.body.appendChild(ta);ta.select();
-      try{document.execCommand('copy');}catch(e){}
-      document.body.removeChild(ta);done();
-    }
   });
 
   /* Baseline: draw in once on first view; settled under reduced motion. */
