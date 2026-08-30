@@ -342,6 +342,14 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 .pubs .y{font-weight:800;font-size:14px;color:var(--muted)}
 .pubs .t{font-weight:700;font-size:16px;letter-spacing:-0.01em}
 .pubs .t .sub{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;max-width:none}
+/* Credentials carry no dates, so the year column is dropped entirely and the
+   entries sit flush left with the section rule rather than indenting past an
+   empty gutter. padding-left goes with it: the base .prow insets 10px, which
+   left the titles at 212 against a kicker and row rule that both start at 202.
+   Flush means 202. The 14px right pad stays, so the chips keep the same right
+   edge as every other ledger chip. Overridden per-context at <=880 and in
+   print, both of which re-declare .pubs .prow after this rule. */
+.pubs--nodate .prow{grid-template-columns:1fr auto;padding-left:0}
 .chip{
   font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--ink);border:1px solid var(--hue);padding:4px 10px;white-space:nowrap;
@@ -441,6 +449,11 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .detail{padding:6px 14px 24px 10px}
   .pubs .prow{grid-template-columns:84px 1fr;row-gap:6px}
   .pubs .chip{grid-column:2;justify-self:start}
+  /* the 84px year column above would otherwise catch the credentials title,
+     which has no year element to fill it, and squeeze it into 84px while the
+     chip sat alone out at column 2. One column, chip under the title. */
+  .pubs--nodate .prow{grid-template-columns:minmax(0,1fr)}
+  .pubs--nodate .chip{grid-column:1}
   .pubs .exhibit{margin:0 14px 16px 10px}
   .caps{grid-template-columns:1fr;gap:28px}
   .foot-cols{grid-template-columns:repeat(2,1fr)}
@@ -484,6 +497,9 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .docket li{padding:3px 0}
   .docket .dr,.docket .dd{font-size:11px}
   .pubs .prow{padding:6px 0;grid-template-columns:80px 1fr auto}
+  /* same fix on paper: without it the title took the 80px year column and the
+     chip stretched across the whole middle column. */
+  .pubs--nodate .prow{grid-template-columns:minmax(0,1fr) auto}
   .pubs .t{font-size:11px}
   .chip,.chip--pub,.chip--talk,.chip--cred{border-color:#000;color:#000;padding:2px 6px}
   .sect-icon,.row-icon,.foot-icon{display:none}
