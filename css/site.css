@@ -92,11 +92,11 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 .now{display:flex;align-items:center;gap:10px;margin-bottom:18px}
 .now-dot{width:10px;height:10px;background:var(--c-red);flex:none}
 .lede{
-  margin-top:26px;max-width:56ch;font-size:19px;line-height:1.55;
+  margin-top:26px;max-width:48ch;font-size:19px;line-height:1.55;
   color:var(--ink-soft);
 }
 .lede strong{color:var(--ink);font-weight:700}
-.lede + .lede{margin-top:16px}
+.lede + .lede{margin-top:22px}
 .meta-line{
   margin-top:22px;padding-top:16px;border-top:2px solid var(--line-firm);
   font-weight:700;font-size:13px;color:var(--muted);letter-spacing:0;
