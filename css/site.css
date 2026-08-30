@@ -288,8 +288,8 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 /* narrative: prose replacement for the bullets block */
 .narrative{
   /* Ken's call: the prose runs the full column, flush to the right margin,
-     so it lines up with the row edge (and, on the three rows that still carry
-     a docket, with the docket rule above it). This is
+     so it lines up with the row edge (and, on the two rows that still carry
+     a docket, with the label and docket rule above it). This is
      wider than the 66ch reading measure the spec suggests; justification plus
      hyphenation below is what keeps the long lines from opening rivers. */
   max-width:none;font-size:15px;line-height:1.6;color:var(--ink-soft);
@@ -302,12 +302,21 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
   hyphenate-limit-chars:7 4 3;
 }
 .narrative + .narrative{margin-top:10px}
-/* On the eleven rows whose docket came out, the narrative is now the first
+/* On the twelve rows whose docket came out, the narrative is now the first
    thing in the expansion and sits straight under the tinted rowhead bar.
    6px of .detail pad + this 10px left it optically ~20px off the tint against
    ~30px at the foot; 16px evens the expansion top and bottom. Rows that still
    carry a docket keep the 10px, which is measured off the docket rule. */
 .detail > .narrative:first-child{padding-top:16px}
+
+/* docket label: the docket is a list of PRIOR titles, so it gets named.
+   Same shape as .pub-kicker (label, rule, rows): the label sits above the
+   docket's own 2px top rule and uses that rule as its underline, so no new
+   rule is introduced. 10px + the 6px on .detail = 16px off the tinted
+   rowhead bar, matching .detail > .narrative:first-child on the rows that
+   have no docket. Left edge is inherited from .detail, so the label, the
+   docket lines and the narrative all share one left edge at every width. */
+.docket-label{display:block;padding:10px 0 6px}
 
 /* docket: role progression inside a row's expansion */
 .docket{border-top:2px solid var(--line-firm);margin-bottom:12px;max-width:none}
@@ -499,6 +508,11 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   /* the (0,2,1) first-child rule above outranks the line above it, so it has
      to be restated on paper or the docket-less rows take 16px each. */
   .detail > .narrative:first-child{padding-top:4px}
+  /* the label prints: .kicker carries its own colour (--muted, #6B6B6B),
+     which the body{color:#000} above does not touch, so it lands as grey
+     ink exactly like every other kicker on the sheet. Only the air comes
+     down, in step with the docket rows below it. */
+  .docket-label{padding:4px 0 3px}
   .docket{margin-bottom:6px}
   .docket li{padding:3px 0}
   .docket .dr{font-size:11px}

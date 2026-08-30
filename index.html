@@ -131,8 +131,10 @@
        Dates and titles per LinkedIn (linkedin.com/in/kennethpriore),
        which is authoritative over the resume markdown. Org-level rows,
        reverse-chron. Where an org held more than one title, the progression
-       runs inside the expansion as a docket; the rowhead's year range is the
-       only date the row carries, so the docket lists titles only. -->
+       runs inside the expansion as a docket labelled PREVIOUSLY, which
+       carries the PRIOR titles only — the rowhead already states the current
+       one. The rowhead's year range is the only date the row carries, so the
+       docket lists titles without dates. -->
   <div class="sect" id="experience">
     <h2><svg class="sect-icon" aria-hidden="true"><use href="#i-record"></use></svg>Experience</h2>
     <span class="kicker num">Career ledger · 1995–2026</span>
@@ -157,8 +159,8 @@
         <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-sign"></use></svg>DOCUSIGN</span>
       </button>
       <div class="detail" id="d-docusign">
-        <ul class="docket">
-          <li><span class="dr">Deputy General Counsel, Senior Director · Product, Engineering, IP &amp; Partner Legal</span></li>
+        <div class="docket-label kicker" id="dk-docusign">Previously</div>
+        <ul class="docket" aria-labelledby="dk-docusign">
           <li><span class="dr">Associate General Counsel · Product and Strategic Partnerships</span></li>
         </ul>
         <p class="narrative">Lead legal for Product, Engineering, IP, and Partner Legal on the Intelligent Agreement Management platform. The team sits where the platform meets the law: responsible-AI governance across the ML lifecycle, legal-by-design and privacy-by-design embedded in the development process itself, stewardship of the global IP portfolio, and the platform, ISV, and channel transactions that extend the partner network. The through line is trust that survives scrutiny, from regulators, from partners, and from the agents now doing the work.</p>
@@ -184,8 +186,8 @@
         <span class="o"><svg class="row-icon row-icon--inst" aria-hidden="true"><use href="#i-repository"></use></svg>BOX</span>
       </button>
       <div class="detail" id="d-box">
-        <ul class="docket">
-          <li><span class="dr">Global Director of Legal</span></li>
+        <div class="docket-label kicker" id="dk-box">Previously</div>
+        <ul class="docket" aria-labelledby="dk-box">
           <li><span class="dr">Senior Managing Counsel · Partnerships</span></li>
           <li><span class="dr">Senior Commercial Counsel</span></li>
         </ul>
@@ -329,9 +331,6 @@
         <span class="o"><svg class="row-icon row-icon--human" aria-hidden="true"><use href="#i-foundation"></use></svg>THIRD ECONOMY</span>
       </button>
       <div class="detail" id="d-third-economy">
-        <ul class="docket">
-          <li><span class="dr">Director &amp; Board Chairperson (advisory)</span></li>
-        </ul>
         <p class="narrative">Board chairperson and strategic advisor. Third Economy helps organizations analyze and improve their ESG performance and build sustainable-investing strategies, organized around the VIA3 framework. The seat draws on sustainability work inside operating companies: smart-grid infrastructure at Silver Spring, disclosure and procurement practices at Box, and program building at Atlassian.</p>
       </div>
     </li>
