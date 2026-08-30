@@ -288,7 +288,8 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 /* narrative: prose replacement for the bullets block */
 .narrative{
   /* Ken's call: the prose runs the full column, flush to the right margin,
-     so it lines up with the docket rule above it and the row edge. This is
+     so it lines up with the row edge (and, on the three rows that still carry
+     a docket, with the docket rule above it). This is
      wider than the 66ch reading measure the spec suggests; justification plus
      hyphenation below is what keeps the long lines from opening rivers. */
   max-width:none;font-size:15px;line-height:1.6;color:var(--ink-soft);
@@ -301,18 +302,20 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
   hyphenate-limit-chars:7 4 3;
 }
 .narrative + .narrative{margin-top:10px}
+/* On the eleven rows whose docket came out, the narrative is now the first
+   thing in the expansion and sits straight under the tinted rowhead bar.
+   6px of .detail pad + this 10px left it optically ~20px off the tint against
+   ~30px at the foot; 16px evens the expansion top and bottom. Rows that still
+   carry a docket keep the 10px, which is measured off the docket rule. */
+.detail > .narrative:first-child{padding-top:16px}
 
 /* docket: role progression inside a row's expansion */
 .docket{border-top:2px solid var(--line-firm);margin-bottom:12px;max-width:none}
-.docket li{
-  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
-  padding:8px 0;border-bottom:1px solid var(--line);
-}
+/* One column since the per-role dates came out: the rowhead's year range is
+   the only date the row carries, so the flex row that pushed a date to the
+   right edge (justify-content/gap) and the .dd rule that styled it are gone. */
+.docket li{padding:8px 0;border-bottom:1px solid var(--line)}
 .docket .dr{font-weight:700;font-size:14px;letter-spacing:-0.01em}
-.docket .dd{
-  font-weight:700;font-size:13px;color:var(--muted);white-space:nowrap;
-  font-variant-numeric:tabular-nums;
-}
 
 /* optional exhibits on "On the record" entries; hidden until the photo loads,
    same treatment as the portrait: squared, 2px ink border, kicker caption bar */
@@ -493,9 +496,12 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .detail{padding:0 0 12px 100px} /* 0 pad + 80px year col + 20px gap = .r column */
   .bullets li{font-size:11px;padding:4px 0 4px 12px}
   .narrative{font-size:11px;line-height:1.4;padding-top:4px;max-width:none}
+  /* the (0,2,1) first-child rule above outranks the line above it, so it has
+     to be restated on paper or the docket-less rows take 16px each. */
+  .detail > .narrative:first-child{padding-top:4px}
   .docket{margin-bottom:6px}
   .docket li{padding:3px 0}
-  .docket .dr,.docket .dd{font-size:11px}
+  .docket .dr{font-size:11px}
   .pubs .prow{padding:6px 0;grid-template-columns:80px 1fr auto}
   /* same fix on paper: without it the title took the 80px year column and the
      chip stretched across the whole middle column. */
