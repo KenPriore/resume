@@ -53,8 +53,10 @@ a{color:var(--c-blue)}
   text-transform:uppercase;color:var(--muted);margin-top:2px;
 }
 .loop-orbit{transform-origin:17px 17px}
-.js .loop-orbit{animation:orbit calc(var(--beat)*2) var(--ease-snap) 1 both}
-@keyframes orbit{from{transform:rotate(-360deg)}to{transform:rotate(0deg)}}
+/* wait one beat, then turn for four — the family gesture. Was 2 beats on
+   --ease-snap running -360deg to 0, i.e. counter-clockwise at half speed. */
+.js .loop-orbit{animation:orbit calc(var(--beat)*4) var(--ease-cut) var(--beat) 1 both}
+@keyframes orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 
 nav.site{display:flex;gap:28px}
 nav.site a{
