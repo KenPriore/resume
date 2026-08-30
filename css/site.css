@@ -52,6 +52,9 @@ a{color:var(--c-blue)}
   display:block;font-weight:700;font-size:11px;letter-spacing:.22em;
   text-transform:uppercase;color:var(--muted);margin-top:2px;
 }
+/* flex:none or the mark squashes to an ellipse when the masthead is tight —
+   it rendered 30.95 x 34 at 375px */
+.mark svg{flex:none}
 .loop-orbit{transform-origin:17px 17px}
 /* wait one beat, then turn for four — the family gesture. Was 2 beats on
    --ease-snap running -360deg to 0, i.e. counter-clockwise at half speed. */
