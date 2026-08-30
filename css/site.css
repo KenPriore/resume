@@ -370,6 +370,10 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 /* linked chips invert ink-on-paper on hover, per motion doctrine */
 a.chip{text-decoration:none}
 a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* nowrap keeps a chip reading as one unit, but at 320px a long speaking-venue
+   label pushed the page 12px wider than the viewport. Below 400, let it wrap
+   rather than overflow. */
+@media(max-width:400px){.chip{white-space:normal}}
 
 /* ---- capabilities -------------------------------------------------------- */
 .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:30px 0 10px}
