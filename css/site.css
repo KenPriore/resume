@@ -310,6 +310,10 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 .exhibit img{display:block;width:100%;height:auto;filter:grayscale(1)}
 .exhibit figcaption{display:block;border-top:2px solid var(--line-firm);padding:8px 12px}
 .pubs .exhibit{margin:0 14px 16px 130px;max-width:440px}
+/* an exhibit inside a career-ledger row lives in .detail, which already
+   carries the 140px title-column indent, so it needs only its own air.
+   Same 440px cap as the publications exhibits. */
+.ledger .exhibit{margin:14px 14px 2px 0;max-width:440px}
 
 /* closed/open state — hard cut, no easing */
 .js .ledger>li>.detail{display:none}
