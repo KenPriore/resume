@@ -323,18 +323,6 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
 .docket li{padding:8px 0;border-bottom:1px solid var(--line)}
 .docket .dr{font-weight:700;font-size:14px;letter-spacing:-0.01em}
 
-/* optional exhibits on "On the record" entries; hidden until the photo loads,
-   same treatment as the portrait: squared, 2px ink border, kicker caption bar */
-.exhibit{border:2px solid var(--line-firm)}
-.exhibit[hidden]{display:none}
-.exhibit img{display:block;width:100%;height:auto;filter:grayscale(1)}
-.exhibit figcaption{display:block;border-top:2px solid var(--line-firm);padding:8px 12px}
-.pubs .exhibit{margin:0 14px 16px 130px;max-width:440px}
-/* an exhibit inside a career-ledger row lives in .detail, which already
-   carries the 140px title-column indent, so it needs only its own air.
-   Same 440px cap as the publications exhibits. */
-.ledger .exhibit{margin:14px 14px 2px 0;max-width:440px}
-
 /* closed/open state — hard cut, no easing */
 .js .ledger>li>.detail{display:none}
 .js .ledger>li.open>.detail{display:block}
@@ -470,7 +458,6 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
      chip sat alone out at column 2. One column, chip under the title. */
   .pubs--nodate .prow{grid-template-columns:minmax(0,1fr)}
   .pubs--nodate .chip{grid-column:1}
-  .pubs .exhibit{margin:0 14px 16px 10px}
   .caps{grid-template-columns:1fr;gap:28px}
   .foot-cols{grid-template-columns:repeat(2,1fr)}
   .tools{align-items:flex-start}
@@ -488,7 +475,7 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 /* ---- print: 1–2 page black-on-white CV ----------------------------------- */
 @media print{
   body{font-size:11px;line-height:1.4;color:#000}
-  nav.site,.tools,.baseline,.fig,.exhibit,.foot-cols,.motifband,.skip{display:none!important}
+  nav.site,.tools,.baseline,.fig,.foot-cols,.motifband,.skip{display:none!important}
   .masthead,.site-foot{border-color:#000}
   .statement{grid-template-columns:1fr;padding:18px 0;gap:0}
   .statement h1{font-size:30px}
