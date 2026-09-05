@@ -363,20 +363,6 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
    rather than overflow. */
 @media(max-width:400px){.chip{white-space:normal}}
 
-/* ---- capabilities -------------------------------------------------------- */
-.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:30px 0 10px}
-.cap{border-top:2px solid var(--line-firm);padding-top:18px}
-.cap--counsel{border-top-color:var(--ill-slate)}
-.cap--platforms{border-top-color:var(--ill-orange)}
-.cap--records{border-top-color:var(--ill-mustard)}
-.cap .icon{width:28px;height:28px;display:block;margin-bottom:14px;color:var(--ink)}
-.cap h3{font-weight:800;font-size:17px;letter-spacing:-0.01em;margin-bottom:12px}
-.cap ul li{
-  border-top:1px solid var(--line);padding:8px 0;
-  font-size:14px;line-height:1.5;color:var(--ink-soft);
-}
-.cap ul li:first-child{border-top:none}
-
 /* ---- footer -------------------------------------------------------------- */
 .site-foot{border-top:4px solid var(--line-firm);margin-top:64px}
 .foot-cols{
@@ -458,7 +444,6 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
      chip sat alone out at column 2. One column, chip under the title. */
   .pubs--nodate .prow{grid-template-columns:minmax(0,1fr)}
   .pubs--nodate .chip{grid-column:1}
-  .caps{grid-template-columns:1fr;gap:28px}
   .foot-cols{grid-template-columns:repeat(2,1fr)}
   .tools{align-items:flex-start}
   /* same collapse the shipped theme uses: six marks become two rows of three */
@@ -514,9 +499,6 @@ a.chip:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .pubs .t{font-size:11px}
   .chip,.chip--pub,.chip--talk,.chip--cred{border-color:#000;color:#000;padding:2px 6px}
   .sect-icon,.row-icon,.foot-icon{display:none}
-  .caps{grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0}
-  .cap{border-top-color:#000}
-  .cap .icon{display:none}
   .colo{padding:12px 0;border-top-color:#000}
   a{color:#000;text-decoration:none}
 }
