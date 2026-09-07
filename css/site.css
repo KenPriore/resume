@@ -337,6 +337,13 @@ nav.site a.link-ai:hover{border-bottom-color:var(--ill-orange);color:var(--ill-o
   align-items:baseline;padding:15px 14px 15px 10px;
 }
 .pubs .y{font-weight:800;font-size:14px;color:var(--muted)}
+/* forthcoming / to-be-published state: a small labelled tag under the year,
+   in the slate publication hue so it reads as an unpublished publication
+   without competing with the row's slate chip. */
+.pubs .y .soon{
+  display:block;font-weight:700;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ill-slate);margin-top:4px;white-space:nowrap;
+}
 .pubs .t{font-weight:700;font-size:16px;letter-spacing:-0.01em}
 .pubs .t .sub{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:3px;max-width:none}
 /* Credentials carry no dates, so the year column is dropped entirely and the
